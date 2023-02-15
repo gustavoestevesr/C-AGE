@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: rgb(21, 115, 71);
+    --secondary-color: rgb(29, 151, 94);
+    --success: rgb(21, 115, 71);
+    --warning: rgb(255, 193, 7);
+    --danger: rgb(220, 53, 69);
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f8f8f8;
+    height: 100vh;
+}
+
+#logo {
+    width: 200px;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+#category {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+#subtitle {
+    margin-bottom: 25px;
+}
+
+.navbar {
+    margin-bottom: 50px;
+}
+
+small {
+    margin-left: 5px;
+    color: red;
+}
+
+#formulario {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: auto;
+    width: 800px;
+    max-width: 100%;
+
+    padding: 30px 20px;
+    background-color: rgba(255, 255, 255, 5);
+
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px var(--main-color);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mb-3 {
+    max-width: 100%;
+    width: 300px;
+}
+
+.mb-6 {
+    max-width: 100%;
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+.circle-image {
+    border-radius: 50%;
+    width: 225px;
+    margin: auto;
+    display: block;
+    border: 2px solid white;
+    padding: 30px;
+    background-color: white;
+}
+
+#qrcode {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: 300px;
+    max-height: 100%;
+    margin: auto;
+}
+
+button.btn.btn-primary {
+    padding: 15px;
+    background-color: var(--main-color);
+    border: 0;
+    width: 300px;
+    max-width: 100%;
+}
+
+button.btn.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+button.btn.btn-primary.inverted {
+    padding: 15px;
+    background-color: white;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    width: 300px;
+    max-width: 100%;
+}
+
+button.btn.btn-primary.inverted:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.card {
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+
+.btn-group {
+    width: 800px;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+#status_description {
+    font-size: 1.2rem;
+    color: white;
+}
+
+#container_status_description {
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+section,
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 1000px;
+ 
+}
+
+h4 {
+    text-align: center;
+}
+
+footer {
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    max-width: 100%;
+    padding: 25px;
+}
+
+#arrow_back{
+    width: 40px;
+    margin-right: 80%;
+    cursor: pointer;
+}
+
+#change_icon{
+    width: 40px;
+    margin-right: 80%;
+    cursor: pointer;
+}
+
+.logo {
+    text-align: center;
+    margin: auto;
+}
+
+.container {
+    justify-content: space-around;
+    margin: 50px;
+}
+
+section {
+    flex-direction: column;
+}
+
+section#capa {
+    position: relative;
+    width: 350px;
+}
+
+section#form {
+    width: 400px;
+}
+
+section#dados {
+    width: 800px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="email"],
+input[type="number"],
+button[type="submit"],
+button {
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+table {
+    overflow-x: visible;
+    display: block;  
+    
+    height: 850px;
+    width: 100%;
+}
+
+#table_id_wrapper{
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+td,
+th {
+    height: 50px;
+}
+
+th.datetime,
+td.datetime {
+
+    width: 100vw;
+}
+
+th.healthProfessional,
+td.healthProfessional {
+    width: 100vw;
+}
+
+th.title,
+td.title {
+    width: 100vw;
+}
+
+th.description,
+td.description {
+    width: 100vw;
+}
+
+#doctor {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 5%;
+    z-index: 2;
+}
+
+#bg-styled {
+    background-image: url('../midias/BG-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+    height: auto;
+}

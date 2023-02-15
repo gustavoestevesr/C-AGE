@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="midias/icone.png" type="image/x-icon">
+
+  <!-- TITLE -->
+  <title>C AGE</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- JQUERY TABLE -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body id="bg-styled" onload="getAppointments()">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <script src="javascript/navbar.js"></script>
+
+  <!-- TITLE -->
+  <h2 id="subtitle" class="text-white">Minhas Consultas</h2>
+
+  <!-- Consultas -->
+  <div class="container" >  
+
+    <table id="table_id">
+      <thead>
+        <tr>
+          <th scope="col">Data e Horário</th>
+          <th scope="col">Profissional de Saúde</th>
+          <th scope="col">Título</th>
+          <th scope="col">Descrição</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+       
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Footer Doctor -->
+  <img id="doctor" src="midias/doctor.png" alt="imagem de um médico">
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- JQUERY TABLE -->
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+  <!-- NODE JS -->
+  <script src="javascript/node.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#table_id').DataTable({
+        "language": {
+          "lengthMenu": "Exibindo _MENU_ registros por página",
+          "zeroRecords": "Nenhum registro encontrado",
+          "info": "Página _PAGE_ de _PAGES_",
+          "infoEmpty": "Não há registros disponíveis",
+          "infoFiltered": "(filtrado de um total de _MAX_ registros)"
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

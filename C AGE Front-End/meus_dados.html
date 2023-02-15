@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="midias/icone.png" type="image/x-icon">
+
+    <!-- TITLE -->
+    <title>C AGE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body id="bg-styled" onload="getProfile()">
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script src="javascript/navbar.js"></script>
+
+    <!-- Form Dados -->
+    <div class="container" style="flex-direction: column;">
+        <section id="dados">
+            <h2 id="subtitle">Dados do Paciente</h2>
+            <hr>
+            <div class="form-floating mb-6">
+                <input type="text" class="form-control" id="inputNameElderly" placeholder="nome do paciente">
+                <label for="inputNameElderly" class="form-label">Nome do paciente</label>
+            </div>
+            <div class="form-floating mb-6">
+                <input type="email" class="form-control" id="inputEmailElderly" placeholder="email do paciente">
+                <label for="inputEmailElderly" class="form-label">Email do paciente</label>
+            </div>
+            <div class="form-floating mb-6">
+                <input type="tel" class="form-control" id="inputPhoneElderly" placeholder="telefone do paciente" onkeydown="phoneNumberFormatter(this)">
+                <label for="inputPhoneElderly" class="form-label">Telefone do paciente</label>
+            </div>
+            <div class="form-floating mb-6">
+                <input type="text" class="form-control" id="inputSUSNumber" maxlength="4" placeholder="9999">
+                <label for="inputSUSNumber" class="form-label">Cartão do SUS</label>
+            </div>
+            <div class="form-floating mb-6">
+                <input type="date" class="form-control" id="inputBirthdayDateElderly" placeholder="99/99/9999">
+                <label for="inputElderlyBday" class="form-label">Data de Nascimento</label>
+            </div>
+            <br>
+            <div class="form-floating mb-6">
+                <input type="text" class="form-control" id="inputCepElderly" placeholder="CEP da residência"
+                    onblur="pesquisacep(this.value);">
+                <label for="inputCepElderly" class="form-label">CEP da residência</label>
+            </div>
+            <div class="form-floating mb-6">
+                <input type="text" class="form-control" id="inputAddressElderly" placeholder="Rua da residência" disabled>
+                <label for="inputAddressElderly" class="form-label">Rua da residência</label>
+            </div>
+            <div class="form-floating mb-6">
+                <input type="text" class="form-control" id="inputNeighborhoodElderly" placeholder="Bairro da residência" disabled>
+                <label for="inputNeighborhoodElderly" class="form-label">Bairro da residência</label>
+            </div>
+            <div class="form-floating mb-6">
+                <input type="text" class="form-control" id="inputCityElderly" placeholder="Cidade da residência" disabled>
+                <label for="inputCityElderly" class="form-label">Cidade da residência</label>
+            </div>
+            <div class="form-floating mb-6">
+                <input type="text" class="form-control" id="inputUFElderly" placeholder="Estado da residência" disabled>
+                <label for="inputUFElderly" class="form-label">Estado da residência</label>
+            </div>
+            <div class="form-floating mb-6">
+                <input type="number" class="form-control" id="inputNumberElderly" placeholder="número da residência">
+                <label for="inputNumberElderly" class="form-label">Número da residência</label>
+            </div>
+            <br>
+            <button class="btn btn-primary" onclick="updateProfile()">Atualizar</button>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>© 2022 C AGE - Akoni Global - Gustavo Esteves</footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Via Cep API -->
+    <script src="javascript/cep.js"></script>
+
+    <!-- FORMAT DATA -->
+    <script src="javascript/formatData.js"></script>
+
+    <!-- NODE JS -->
+    <script src="javascript/node.js"></script>
+
+</body>
+
+</html>

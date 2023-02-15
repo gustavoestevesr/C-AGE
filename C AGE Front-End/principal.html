@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="midias/icone.png" type="image/x-icon">
+
+    <!-- TITLE -->
+    <title>C AGE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- QR CODE LIB -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body id="status" onload="getHome()">
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script src="javascript/navbar.js"></script>
+
+    <!-- Circle Image Elderly -->
+    <img class="circle-image" src="midias/woman.png" alt="">
+    
+    <!-- Comment about status -->
+    <br>
+    <div id="container_status_description">
+        <p id="status_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, ut totam repellat mollitia quas nesciunt, placeat, sed libero ipsa eum quo aut inventore asperiores dolorem! Corporis harum nesciunt praesentium laboriosam?</p>
+    </div>
+
+    <!-- Dados Rápidos -->
+    <div class="container" style="flex-direction: column;">
+        <div class="form-floating mb-6">
+            <input type="text" class="form-control" id="inputElderlyName" placeholder="nome sobrenome" disabled>
+            <label for="inputElderlyName" class="form-label">Nome do paciente</label>                    
+        </div>
+        <br>
+        <div class="form-floating mb-6">
+            <input type="text" class="form-control" id="inputElderlyEmergencyName" placeholder="nome sobrenome" disabled>
+            <label for="inputElderlyEmergencyName" class="form-label">Nome do Contato de emergência</label>                    
+        </div>
+        <div class="form-floating mb-6">
+            <input type="text" class="form-control" id="inputElderlyEmergencyPhone" placeholder="(99) 99999-9999" disabled>
+            <label for="inputElderlyEmergencyPhone" class="form-label">Telefone do Contato de emergência</label>                    
+        </div>
+        <br>
+        <div class="form-floating mb-6">
+            <select class="form-select" id="inputElderlyBloodTypeElderly" disabled>
+                <option selected>Selecione o tipo sanguíneo</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="AB">AB</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+            <label for="inputElderlyBloodTypeElderly">Tipo Sanguíneo</label>
+        </div>
+        <div class="form-floating mb-6">
+            <textarea class="form-control" id="InputElderlyAllergyElderly" style="height: 100px"
+                placeholder="Alergia(s) do paciente" disabled></textarea>
+            <label for="InputElderlyAllergyElderly" class="form-label">Alergia(s)</label>
+        </div>                
+    </div>
+
+    <!-- QR CODE -->
+    <div id="qrcode" style="padding: 20px; background-color: white; border-radius: 5px;"></div>
+    <script src="javascript/qr_code.js"></script>    
+
+    <!-- NODE JS -->
+    <script src="javascript/node.js"></script>
+
+    <!-- Footer -->
+    <footer>© 2022 C AGE - Akoni Global - Gustavo Esteves</footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

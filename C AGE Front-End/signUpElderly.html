@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="midias/icone.png" type="image/x-icon">
+
+    <!-- TITLE -->
+    <title>C AGE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+    body{
+        background-image: linear-gradient(to bottom, rgb(21,115,71) , lightgreen);
+    }
+    </style>
+</head>
+
+<body>    
+
+    <!-- Form Register Elderly -->
+    <main id="elderly-register">
+        <div id="formulario">
+            <section id="capa">
+                <img id="arrow_back" src="midias/back.png" alt="seta preta para voltar a tela" onclick="window.location.href='signInElderly.html'">
+                <div class="logo">
+                    <img id="logo" src="midias/nursing-home.png" alt="">
+                    <p id="category">Idoso</p>
+                </div>
+            </section>
+            <section id="form">
+                <h2 id="subtitle">Cadastro</h2>
+    
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="inputElderlyNameRegister" maxlength="40" placeholder="nome completo">
+                    <label for="inputElderlyNameRegister" class="form-label">Nome Completo</label>                    
+                </div>  
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="inputSUSNumberRegister" maxlength="4" placeholder="4 últimos">
+                    <label for="inputSUSNumberRegister" class="form-label">Cartão do SUS</label>
+                    <small>4 últimos dígitos da carteira</small>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="inputElderlyPasswordRegister" placeholder="**********">
+                    <label for="inputElderlyPasswordRegister" class="form-label">Senha</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="inputElderlyPasswordRegister2" placeholder="**********">
+                    <label for="inputElderlyPasswordRegister2" class="form-label">Confirmar Senha</label>
+                </div>
+
+                <div class="mb-3">
+                    <button class="btn btn-primary" onclick="RegisterElderly()">Cadastrar</button>
+                </div>
+                
+            </section>
+        </div>
+    </main>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Javascript external file -->
+    <script src="javascript/script_auth.js"></script>
+
+    <!-- NODE JS -->
+    <script src="javascript/node.js"></script>
+
+    <script>
+        document.querySelector("#inputSUSNumberLogin").focus()      
+    </script>
+
+</body>
+
+</html>

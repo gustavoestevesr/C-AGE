@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="midias/icone.png" type="image/x-icon">
+
+    <!-- TITLE -->
+    <title>C AGE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body id="bg-styled">
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script src="javascript/navbar.js"></script>
+
+    <!-- Comentarios -->
+    <div class="container" style="flex-direction: column;">
+        <h2 id="subtitle">Registro Intercorrência</h2>
+        <br>
+        <div class="form-floating mb-6">
+            <input type="text" class="form-control" id="InputIntercorrenceTitle" required
+                placeholder="Digite aqui o título da tntercorrência">
+            <label class="form-label">Título da intercorrência</label>
+        </div>
+        <div class="form-floating mb-6">
+            <textarea class="form-control" id="InputIntercorrenceDescription" style="height: 100px;"
+                placeholder="Digite aqui a descrição da tntercorrência"></textarea>
+            <label for="InputIntercorrenceDescription" class="form-label">Descrição da intercorrência</label>
+        </div>
+        <div class="form-floating mb-6">
+            <select class="form-select" id="SelectIntercorrencePainLevel">
+                <option selected disabled>Selecione o nível de dor</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <label for="SelectIntercorrencePainLevel">Nível de dor</label>
+        </div>
+        <div class="form-floating mb-6">
+            <input type="date" class="form-control" id="InputIntercorrenceDate">
+            <label for="InputIntercorrenceDate" class="form-label">Data da intercorrência</label>
+        </div>
+        <br>
+        <button class="btn btn-primary" onclick="updateIntercorrence()">Enviar</button>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>© 2022 C AGE - Akoni Global - Gustavo Esteves</footer>
+
+    <!-- NODE JS -->
+    <script src="javascript/node.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

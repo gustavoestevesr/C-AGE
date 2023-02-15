@@ -1,0 +1,1 @@
+var qrCode = new QRCode(document.getElementById("qrcode"), "http://www.google.com/");
